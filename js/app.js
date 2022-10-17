@@ -74,18 +74,20 @@ const displayNews = (news, categoryName) => {
                     </div>
 
                     <!-- Card Footer -->
-                    <div class="card-info d-flex align-items-center justify-content-between p-3 pe-4">
-                        <div class="author-details d-flex gap-2">
-                            <img src="${singleNews.author.img}" class="author-img rounded-circle" alt="author-image">
-                            <div class="author-info">
-                                <p class="mb-0">${singleNews.author.name? singleNews.author.name : "No Data Available"}</p>
-                                <p class="text-secondary fs-6">
-                                ${singleNews.author.published_date}</p>
+                    <div class="card-info d-flex justify-content-between gap-1 gap-md-0 p-3 pe-4">
+                        <div class="d-flex gap-5">
+                            <div class="author-details d-flex gap-2">
+                                <img src="${singleNews.author.img}" class="author-img rounded-circle" alt="author-image">
+                                <div class="author-info">
+                                    <p class="mb-0">${singleNews.author.name? singleNews.author.name : "No Data Available"}</p>
+                                    <p class="text-secondary fs-6">
+                                    ${singleNews.author.published_date}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="view-count d-flex align-items-center gap-2">
-                            <i class="fa-regular fa-eye"></i>
-                            <h6 class="mb-0">${singleNews.total_view? singleNews.total_view : "No Data Available"}</h6>
+                            <div class="view-count d-flex align-items-center gap-2">
+                                <i class="fa-regular fa-eye"></i>
+                                <h6 class="mb-0">${singleNews.total_view? singleNews.total_view : "No Data Available"}</h6>
+                            </div>
                         </div>
 
                         <!-- Button trigger modal -->
