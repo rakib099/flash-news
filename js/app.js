@@ -70,7 +70,7 @@ const displayNews = (news, categoryName) => {
                     </div>
 
                     <!-- Card Footer -->
-                    <div class="card-info d-flex align-items-center justify-content-between p-3">
+                    <div class="card-info d-flex align-items-center justify-content-between p-3 pe-4">
                         <div class="author-details d-flex gap-2">
                             <img src="${singleNews.author.img}" class="author-img rounded-circle" alt="author-image">
                             <div class="author-info">

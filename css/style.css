@@ -1,3 +1,7 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+
 #categories-container a:focus {
     color: blue;
     background-color: #EEEFFF;
@@ -11,4 +15,8 @@
 
 .card-info i {
     cursor: pointer;
+}
+
+footer p {
+    font-family: 'Playfair Display', serif;
 }
