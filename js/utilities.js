@@ -24,7 +24,7 @@ const displayAllNews = allNews => {
 
     // sort by view count
     allNews.sort((a, b) => (a.total_view > b.total_view) ? -1 : 1);
-    
+
     allNews.forEach(singleNews => {
         const newsCard = document.createElement('div');
         newsCard.classList.add('col');
@@ -72,7 +72,7 @@ const displayAllNews = allNews => {
         newsContainer.appendChild(newsCard);
         // console.log(singleNews);
     });
-    console.log(allNews);
+    // console.log(allNews);
     // Stop the spinner or loader
     toggleSpinner(false);
 }
