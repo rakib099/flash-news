@@ -13,7 +13,7 @@ const displayCategories = categories => {
         a.classList.add('nav-link');
         a.classList.add('fs-5');
         a.setAttribute('href', '#');
-        a.setAttribute('onclick', `loadNews('${category.category_id}', 
+        a.setAttribute('onclick', `toggleSpinner(true);loadNews('${category.category_id}', 
         '${category.category_name}')`);
         a.innerText = `${category.category_name}`;
 
@@ -97,6 +97,8 @@ const displayNews = (news, categoryName) => {
         // console.log(singleNews);
     });
     // console.log(news, categoryName);
+    // Stop the spinner or loader
+    toggleSpinner(false);
 }
 
 const loadDetails = async(newsId) => {
@@ -144,4 +146,5 @@ const displayDetails = singleNews => {
     console.log(singleNews);
 }
 
+loadNews("08", "All News");     // Set All News as default category
 loadCategories();   // categories will be loaded by default
