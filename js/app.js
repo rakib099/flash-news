@@ -91,7 +91,10 @@ const displayNews = (news, categoryName) => {
                         </div>
 
                         <!-- Button trigger modal -->
-                        <i onclick="loadDetails('${singleNews._id}')" class="fa-solid fa-arrow-right text-primary fs-5" data-bs-toggle="modal" data-bs-target="#newsDetailsModal"></i>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-semibold text-primary">Read Details</span>
+                            <i onclick="loadDetails('${singleNews._id}')" class="fa-solid fa-arrow-right text-primary fs-5" data-bs-toggle="modal" data-bs-target="#newsDetailsModal"></i>
+                        </div>
                     </div>
 
                 </div>
