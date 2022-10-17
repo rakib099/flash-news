@@ -109,6 +109,38 @@ const loadDetails = async(newsId) => {
 const displayDetails = singleNews => {
     const modalTitle = document.getElementById('newsDetailsModalLabel');
     modalTitle.innerText = `${singleNews.title}`;
+
+    const modalContents = document.getElementById('modal-contents');
+    modalContents.innerHTML = `
+    <div class="row row-cols-1 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="${singleNews.image_url}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="author-details d-flex gap-2">
+                    <img src="${singleNews.author.img}" class="author-img rounded-circle" alt="author-image">
+                    <div class="author-info">
+                        <p class="mb-0">${singleNews.author.name? singleNews.author.name : "No Data Available"}</p>
+                        <p class="text-secondary fs-6">
+                        ${singleNews.author.published_date}</p>
+                    </div>
+                </div>
+
+                <div class="view-count d-flex align-items-center gap-2">
+                    <i class="fa-regular fa-eye"></i>
+                    <h6 class="mb-0">${singleNews.total_view? singleNews.total_view : "No Data Available"}</h6>
+                </div>
+            </div>
+            <p class="card-text">${singleNews.details}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
     console.log(singleNews);
 }
 
