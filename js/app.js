@@ -157,7 +157,7 @@ const displayDetails = singleNews => {
     </div>
   </div>
     `;
-    console.log(singleNews);
+    // console.log(singleNews);
 }
 
 loadNews("08", "All News");     // Set All News as default category

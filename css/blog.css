@@ -1,0 +1,15 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+/* Accordion */
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button h5 {
+    color: #615f5f
+}
+
+/* Footer */
+footer p {
+    font-family: 'Playfair Display', serif;
+}
