@@ -57,15 +57,39 @@
         </nav>
     </header>
     <main>
+        <!-- News Found Message -->
         <section class="container my-4">
             <div id="result-message-container" class="d-none text-bg-primary p-3 rounded">
-                <p id="result-message" class="text-center fs-5 fw-semibold mb-0">4 items found for the category Entertainment</p>
+                <p id="result-message" class="text-center fs-5 fw-semibold mb-0">4 items found for the category
+                    Entertainment</p>
             </div>
         </section>
+        
         <!-- Category Wise News Result -->
         <section class="container mt-4 mb-5">
             <div id="news-container" class="row row-cols-1 g-4">
-                
+
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <section>
+            <div class="modal fade" id="newsDetailsModal" tabindex="-1" aria-labelledby="newsDetailsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="newsDetailsModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

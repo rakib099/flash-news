@@ -67,7 +67,7 @@ const displayNews = (news, categoryName) => {
                     <div class="card-body">
                         <h5 class="card-title">${singleNews.title}</h5>
                         <p class="card-text">${singleNews.details.length === 700 ? singleNews.details : singleNews.details.slice(0, 700)}</p>
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="card-info d-flex align-items-center justify-content-between">
                             <div class="author-details d-flex gap-2">
                                 <img src="${singleNews.author.img}" class="author-img rounded-circle" alt="author-image">
                                 <div class="author-info">
@@ -81,7 +81,11 @@ const displayNews = (news, categoryName) => {
                                 <i class="fa-regular fa-eye"></i>
                                 <h6 class="mb-0">${singleNews.total_view? singleNews.total_view : "No Data Available"}</h6>
                             </div>
-                            <i class="fa-solid fa-arrow-right text-primary fs-5"></i>
+
+                            <!-- Button trigger modal -->
+                            <i onclick="loadDetails('${singleNews._id}')" class="fa-solid fa-arrow-right text-primary fs-5" data-bs-toggle="modal" data-bs-target="#newsDetailsModal"></i>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -92,7 +96,20 @@ const displayNews = (news, categoryName) => {
         newsContainer.appendChild(newsCard);
         // console.log(singleNews);
     });
-    console.log(news, categoryName);
+    // console.log(news, categoryName);
+}
+
+const loadDetails = async(newsId) => {
+    const url = `https://openapi.programming-hero.com/api/news/${newsId}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    displayDetails(data.data[0]);
+}
+
+const displayDetails = singleNews => {
+    const modalTitle = document.getElementById('newsDetailsModalLabel');
+    modalTitle.innerText = `${singleNews.title}`;
+    console.log(singleNews);
 }
 
 loadCategories();   // categories will be loaded by default
