@@ -7,4 +7,3 @@ function toggleSpinner(isLoading) {
         spinner.classList.add('d-none');
     }
 }
-// toggleSpinner(true);

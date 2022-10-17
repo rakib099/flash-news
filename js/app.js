@@ -81,7 +81,7 @@ const displayNews = (news, categoryName) => {
                                 <div class="author-info">
                                     <p class="mb-0">${singleNews.author.name? singleNews.author.name : "No Data Available"}</p>
                                     <p class="text-secondary fs-6">
-                                    ${singleNews.author.published_date}</p>
+                                    ${singleNews.author.published_date? singleNews.author.published_date : "No Data Available"}</p>
                                 </div>
                             </div>
                             <div class="view-count d-flex align-items-center gap-2">
@@ -91,9 +91,9 @@ const displayNews = (news, categoryName) => {
                         </div>
 
                         <!-- Button trigger modal -->
-                        <div class="d-flex align-items-center gap-2">
+                        <div onclick="loadDetails('${singleNews._id}')" class="sec-btn-details d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#newsDetailsModal">
                             <span class="fw-semibold text-primary">Read Details</span>
-                            <i onclick="loadDetails('${singleNews._id}')" class="fa-solid fa-arrow-right text-primary fs-5" data-bs-toggle="modal" data-bs-target="#newsDetailsModal"></i>
+                            <i class="fa-solid fa-arrow-right text-primary fs-5"></i>
                         </div>
                     </div>
 
