@@ -107,9 +107,14 @@ const displayNews = (news, categoryName) => {
 
 const loadDetails = async(newsId) => {
     const url = `https://openapi.programming-hero.com/api/news/${newsId}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    displayDetails(data.data[0]);
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        displayDetails(data.data[0]);
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
 const displayDetails = singleNews => {
