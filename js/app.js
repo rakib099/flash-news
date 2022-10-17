@@ -38,21 +38,25 @@ const displayNews = (news, categoryName) => {
     // News Found Message
     const messageContainer = document.getElementById('result-message-container');
     const resultMessage = document.getElementById('result-message');
+    const footer = document.getElementById('footer');
     
     if (news.length === 0) {
         messageContainer.classList.remove('d-none');
         messageContainer.classList.remove('text-bg-primary');
         messageContainer.classList.add('bg-white');
         resultMessage.innerText = `No News Found for category ${categoryName}`;
+        footer.classList.add('d-none');
     }
     else if (news.length > 0) {
         messageContainer.classList.remove('d-none');
         messageContainer.classList.remove('bg-white');
         messageContainer.classList.add('text-bg-primary');
         resultMessage.innerText = `${news.length} news found for category ${categoryName}`;
+        footer.classList.remove('d-none');
     }
     else {
         messageContainer.classList.add('d-none');
+        footer.classList.remove('d-none');
     }
     news.forEach(singleNews => {
         const newsCard = document.createElement('div');
