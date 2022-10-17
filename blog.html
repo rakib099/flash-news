@@ -35,13 +35,13 @@
         </nav>
         <!-- horizontal bar -->
         <hr class="">
-        
+        <h2 class="text-center text-info mt-4">Read the Core Concepts of ES6</h2>
     </header>
 
     <!-- Main Section -->
     <main class="container">
         <!-- Accordion -->
-        <section class="my-4">
+        <section class="mb-5 mt-4">
             <div class="accordion mx-md-5" id="accordionExample">
                 <div class="accordion-item mb-3">
                   <h2 class="accordion-header" id="headingOne">
@@ -67,24 +67,10 @@
                       </ul>
                       <p class="fs-5 fw-semibold">Const</p>
                       <ul>
-                        <li>Neither can be reassigned and nor can be redeclared</li>
+                        <li>Neither can be reassigned nor can be redeclared</li>
                         <li>Must be initialized at the time of declaration</li>
                         <li>Block scoped</li>
                       </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item border mb-3">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <h5 class="fw-bold mb-0">Differences between Arrow Function and Regular Function</h5>
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      
                     </div>
                   </div>
                 </div>
@@ -98,13 +84,13 @@
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        map: takes each element of the array, runs the described operation with each element and puts each element in a new array and finally returns the new array
+                        <p><span class="fw-semibold">map:</span> It takes each element of the array, runs the described operation with each element and puts each element in a new array and finally returns the new array.</p>
 
-                        forEach: takes each element of the array, runs the described operations with each element but doesn't return anything like map.
-                        
-                        filter: takes each element of the array, checks the condition given in the function for each element. Puts the elements that satisfies the condition in a new array and finally returns that new array.
-                        
-                        find: similar to filter. just returns the first element that fulfills the condition instead of returning an array of elements.
+                        <p><span class="fw-semibold">forEach:</span> It takes each element of the array, runs the described operations with each element but doesn't return anything like map.</p>
+
+                        <p><span class="fw-semibold">filter:</span> It takes each element of the array, checks the condition given in the function for each element. Puts the elements that satisfies the condition in a new array and finally returns that new array.</p>
+
+                        <p><span class="fw-semibold">find:</span> It's similar to filter. just returns the first element that fulfills the condition instead of returning an array of elements.</p>
                     </div>
                   </div>
                 </div>
@@ -112,16 +98,38 @@
                   <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      <h5 class="fw-bold mb-0">What is a semantic tag in HTML?</h5>
+                      <h5 class="fw-bold mb-0">Why will you use Template String?</h5>
                     </button>
                   </h2>
                   <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <p>A semantic tag is something that clearly describes its meaning to both the browser and the developer. Some semantic tags are header, main, footer, aside, article etc. These tags are introduced in HTML5 for making html files more meaningful  for both humans and machines.</p>
+                      <p>I will describe two reasons why we should use template string:</p>
+                      <ul>
+                        <li class="mb-3"><span class="fw-semibold">Multi-line:</span> Making multi-line strings are way easier when we use template strings. We don't need to concat strings or use "\n" to make strings multi-line like we do in making normal strings using single quote ('') or double quote (""). When using template string, you just write naturally and press enter if you need multi-line and it automatically takes your string as a multi-line string.</li>
+                        <li><span class="fw-semibold">String interpolation:</span> You can use any dynamic value or valid js expression with template string. Just put the expression inside ${ } and you are done. You don't have to concatenate them using the addition operator (+).</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+                <div class="accordion-item border mb-3">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h5 class="fw-bold mb-0">Differences between Arrow Function and Regular Function</h5>
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul>
+                            <li><p><span class="fw-semibold">Syntax:</span> These two has different syntax. Arrow function which is also called fat arrow function is declared using =>. Also, arrow functions doesn't need any function keyword while declaring.</p></li>
+                            <li><p><span class="fw-semibold">Parentheses:</span> When there is only one parameter you don't have to use () in arrow function. While you have to use () regardless of one or more parameters in regular function.</p></li>
+                            <li><p><span class="fw-semibold">this keyword:</span> Unlike regular functions, arrow functions do not have their own this. The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.</p></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
               </div>
         </section>
     </main>
