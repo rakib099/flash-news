@@ -58,6 +58,10 @@ const displayNews = (news, categoryName) => {
         messageContainer.classList.add('d-none');
         footer.classList.remove('d-none');
     }
+
+    // sort by view count
+    news.sort((a, b) => (a.total_view > b.total_view) ? -1 : 1);
+
     news.forEach(singleNews => {
         const newsCard = document.createElement('div');
         newsCard.classList.add('col');
@@ -70,7 +74,7 @@ const displayNews = (news, categoryName) => {
                 <div class="col-md-8 d-flex flex-column">
                     <div class="card-body">
                         <h5 class="card-title">${singleNews.title}</h5>
-                        <p class="card-text">${singleNews.details.length === 700 ? singleNews.details : singleNews.details.slice(0, 700)}</p>
+                        <p class="card-text">${singleNews.details.length === 400 ? singleNews.details : `${singleNews.details.slice(0, 400)}...`}</p>
                     </div>
 
                     <!-- Card Footer -->
@@ -160,5 +164,5 @@ const displayDetails = singleNews => {
     // console.log(singleNews);
 }
 
-loadNews("08", "All News");     // Set All News as default category
+loadAllNews();     // Set All News as default category
 loadCategories();   // categories will be loaded by default
