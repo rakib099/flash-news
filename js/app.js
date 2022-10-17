@@ -64,7 +64,7 @@ const displayNews = (news, categoryName) => {
         newsCard.innerHTML = `
         <div class="card">
             <div class="row g-0">
-                <div class="col-md-4 p-3">
+                <div class="col-md-4 p-3 thumb-img">
                     <img src="${singleNews.thumbnail_url}" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8 d-flex flex-column">

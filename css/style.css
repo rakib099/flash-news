@@ -20,3 +20,10 @@
 footer p {
     font-family: 'Playfair Display', serif;
 }
+
+/* Media Query */
+@media screen and (max-width: 600px) {
+    .thumb-img > img {
+        width: 100%;
+    }
+}
